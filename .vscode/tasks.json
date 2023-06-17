@@ -1,0 +1,176 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "sfDeploy",
+            "command": "sf project deploy start",
+            "type": "shell",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "sfDeployIgnoreConflicts",
+            "command": "sf project deploy start -c",
+            "type": "shell",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "sfRetrieve",
+            "command": "sf project retrieve start",
+            "type": "shell",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "sfRetrieveIgnoreConflicts",
+            "command": "sf project retrieve start -c",
+            "type": "shell",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "sfDeployPreview",
+            "command": "sf project deploy preview",
+            "type": "shell",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "sfRetrievePreview",
+            "command": "sf project retrieve preview",
+            "type": "shell",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "sfFullPreview",
+            "command": "sf project retrieve preview & sf project deploy preview",
+            "type": "shell",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "sfDeleteTracking",
+            "command": "sf project delete tracking -p",
+            "type": "shell",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "sfResetTracking",
+            "command": "sf project reset tracking -p",
+            "type": "shell",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "sfLogTail debug",
+            "command": "echo a > apexLogTailDebug.log && code apexLogTailDebug.log && sf apex log tail -c | grep USER_DEBUG > apexLogTailDebug.log",
+            "windows": {
+                "command": "echo a > apexLogTailDebug.log;code apexLogTailDebug.log;sf apex log tail -c | Select-String -Pattern \"USER_DEBUG\" > apexLogTailDebug.log"
+            },
+            "type": "shell",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent",
+                "panel": "dedicated",
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "sfLogTail full",
+            "command": "echo a > apexLogTailFull.log && code apexLogTailFull.log && sf apex log tail -c > apexLogTailFull.log",
+            "windows": {
+                "command": "echo a > apexLogTailFull.log;code apexLogTailFull.log;sf apex log tail -c > apexLogTailFull.log"
+            },
+            "type": "shell",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "silent",
+                "panel": "dedicated",
+            },
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
