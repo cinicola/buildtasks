@@ -25,14 +25,20 @@ Exibe as alterações na Org que não estão sincronizadas com o seu local.
 Executa os comandos sfDeployPreview e sfRetrievePreview simultaneamente.
 
 ### sfDeleteTracking
-Exclui rastreamento:
+Exclui todo o rastreamento:
 - Ao fazer deploy, enviará todos os metadados para a Org.
 - Ao fazer retrieve, trará todos os metadados para o seu local.
 
+_Exemplo de uso:_
+- Você precisa resincronizar todos os metadados do git para sua org
+
 ### sfResetTracking
-Exclui rastreamento recente não sincronizado:
-- Ao fazer deploy enviará todos os metadados para a Org.
-- Ao fazer retrieve trará todos os metadados para o seu local.
+Reinicia rastreamento:
+- Ao fazer deploy, não enviará nenhum metadado para a Org.
+- Ao fazer retrieve, não trará nenhum metadado para o seu local.
+
+_Exemplo de uso:_
+- Você mexeu dezenas de coisas na org ou local, mas não deseja sincronizar
 
 
 ## 2) Outros atalhos úteis:
