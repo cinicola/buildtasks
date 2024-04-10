@@ -40,6 +40,10 @@ Reinicia rastreamento:
 _Exemplo de uso:_
 - Você mexeu dezenas de coisas na org ou local, mas não deseja sincronizar
 
+```
+💡 Dica: Antes de fazer um "sfRetrieve", faça um commit no git. Dessa forma ficará visível apenas as últimas alterações trazidas da org após execução do comando.
+Por vezes o Salesforce traz mais itens que o esperado ao fazer o comando e pode gerar confusão.
+```
 
 ## 2) Outros atalhos úteis:
 
