@@ -179,6 +179,24 @@
             "label": "sfRunLocalTests ➡ Tap",
             "command": "echo a > tests.txt && code tests.txt && sfdx apex test run -l RunLocalTests -r tap -w 120 > tests.txt",
             "windows": {
+                "command": "echo a > tests.txt;code tests.txt;sf apex test run -l RunLocalTests -r tap -w 120 > tests.txt; .\\.vscode\\filterTests.ps1"
+            },
+            "type": "shell",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent",
+                "panel": "dedicated",
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "sfRunLocalTestsFull ➡ Tapfull",
+            "command": "echo a > tests.txt && code tests.txt && sfdx apex test run -l RunLocalTests -r tap -w 120 > tests.txt",
+            "windows": {
                 "command": "echo a > tests.txt;code tests.txt;sfdx apex test run -l RunLocalTests -r tap -w 120 > tests.txt"
             },
             "type": "shell",
